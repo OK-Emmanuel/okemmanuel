@@ -23,7 +23,7 @@ export default function Speaking() {
 
         <div className="flex md:justify-end">
           <a
-            href="#contact"
+            href="/connect"
             className="inline-flex items-center gap-2 rounded-full border border-gold/50 px-8 py-4 text-sm font-semibold text-gold-soft transition-colors hover:bg-gold hover:text-[#08080a]"
           >
             Invite Emmanuel to Speak

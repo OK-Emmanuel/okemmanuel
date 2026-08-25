@@ -1,14 +1,10 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import Solutions from "@/components/Solutions";
-import Offers from "@/components/Offers";
-import WhyMe from "@/components/WhyMe";
-import CaseStudies from "@/components/CaseStudies";
-import Philosophy from "@/components/Philosophy";
-import Speaking from "@/components/Speaking";
-import About from "@/components/About";
-import Ventures from "@/components/Ventures";
-import FinalCta from "@/components/FinalCta";
+import OnePersonManyExpressions from "@/components/OnePersonManyExpressions";
+import Domains from "@/components/Domains";
+import CurrentWork from "@/components/CurrentWork";
+import CaseStudyPreview from "@/components/CaseStudyPreview";
+import HomeCta from "@/components/HomeCta";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,15 +13,11 @@ export default function Home() {
       <Nav />
       <main className="flex-1">
         <Hero />
-        <Solutions />
-        <Offers />
-        <WhyMe />
-        <CaseStudies />
-        <Philosophy />
-        <Speaking />
-        <About />
-        <Ventures />
-        <FinalCta />
+        <OnePersonManyExpressions />
+        <Domains />
+        <CurrentWork />
+        <CaseStudyPreview />
+        <HomeCta />
       </main>
       <Footer />
     </>

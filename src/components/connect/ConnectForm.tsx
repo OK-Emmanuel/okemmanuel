@@ -1,11 +1,19 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import AmbientBackground from "./AmbientBackground";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-export default function FinalCta() {
+const REASONS = [
+  "Work with me",
+  "Invite me to speak",
+  "Collaborate",
+  "Learn from me / mentorship",
+  "Support an initiative",
+  "A strategic conversation",
+];
+
+export default function ConnectForm() {
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -19,30 +27,11 @@ export default function FinalCta() {
   }
 
   return (
-    <section
-      id="contact"
-      className="relative overflow-hidden border-t border-line py-28 md:py-36"
-    >
-      <AmbientBackground variant="orbit" />
-
-      <div className="section-shell relative grid gap-12 lg:grid-cols-2 lg:gap-20">
-        <div>
-          <h2 className="font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
-            Have a technology problem worth solving?
-          </h2>
-          <p className="mt-6 max-w-md leading-relaxed text-muted">
-            Tell me what you&apos;re building, what isn&apos;t working, or
-            where you believe technology could create leverage.
-          </p>
-          <p className="mt-8 text-sm text-muted/80">
-            For consulting, product development, AI automation and strategic
-            technology engagements.
-          </p>
-        </div>
-
-        <div className="rounded-2xl border border-line bg-surface p-8 md:p-10">
+    <section id="form" className="relative py-16 md:py-24">
+      <div className="section-shell">
+        <div className="mx-auto max-w-2xl rounded-2xl border border-line bg-surface p-8 md:p-10">
           {status === "success" ? (
-            <div className="flex h-full flex-col items-center justify-center py-10 text-center">
+            <div className="flex flex-col items-center justify-center py-10 text-center">
               <p className="font-serif text-2xl text-gold-soft">
                 Message received.
               </p>
@@ -79,6 +68,25 @@ export default function FinalCta() {
               </div>
 
               <label className="flex flex-col gap-2 text-sm text-muted">
+                This is about
+                <select
+                  required
+                  name="reason"
+                  defaultValue=""
+                  className="rounded-lg border border-line bg-surface-raised px-4 py-3 text-foreground outline-none transition-colors focus:border-gold/60"
+                >
+                  <option value="" disabled>
+                    Select a reason
+                  </option>
+                  {REASONS.map((reason) => (
+                    <option key={reason} value={reason}>
+                      {reason}
+                    </option>
+                  ))}
+                </select>
+              </label>
+
+              <label className="flex flex-col gap-2 text-sm text-muted">
                 Organization (optional)
                 <input
                   name="organization"
@@ -90,13 +98,13 @@ export default function FinalCta() {
               </label>
 
               <label className="flex flex-col gap-2 text-sm text-muted">
-                What are you building or trying to solve?
+                Tell me more
                 <textarea
                   required
                   name="message"
                   rows={5}
                   className="resize-none rounded-lg border border-line bg-surface-raised px-4 py-3 text-foreground outline-none transition-colors focus:border-gold/60"
-                  placeholder="Tell me a bit about the problem..."
+                  placeholder="What's on your mind?"
                 />
               </label>
 
@@ -105,9 +113,7 @@ export default function FinalCta() {
                 disabled={status === "submitting"}
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-sm font-semibold text-[#08080a] transition-transform hover:scale-[1.02] disabled:opacity-60 disabled:hover:scale-100"
               >
-                {status === "submitting"
-                  ? "Sending…"
-                  : "Start a Conversation →"}
+                {status === "submitting" ? "Sending…" : "Send Message →"}
               </button>
             </form>
           )}

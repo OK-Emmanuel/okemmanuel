@@ -1,10 +1,11 @@
 const LINKS = [
-  { label: "Home", href: "#home" },
-  { label: "Solutions", href: "#solutions" },
-  { label: "Case Studies", href: "#case-studies" },
-  { label: "About", href: "#about" },
-  { label: "Ventures", href: "#ventures" },
-  { label: "Speaking", href: "#speaking" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Vision", href: "/vision" },
+  { label: "Work", href: "/work" },
+  { label: "Thinking", href: "/thinking" },
+  { label: "Initiatives", href: "/initiatives" },
+  { label: "Connect", href: "/connect" },
 ];
 
 export default function Footer() {
@@ -16,7 +17,7 @@ export default function Footer() {
             O.K. <span className="text-gold">Emmanuel</span>
           </p>
           <p className="mt-2 text-sm text-muted">
-            Technology &amp; Product Strategist
+            Builder of People, Ventures &amp; Systems
           </p>
         </div>
 

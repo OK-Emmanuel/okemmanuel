@@ -17,7 +17,7 @@ const VENTURES = [
     name: "Tech Catalyst Initiative",
     description: "Technology & Leadership Development",
     cta: "Explore Initiative",
-    href: "#",
+    href: "#tech-catalyst",
     status: "live",
   },
 ];

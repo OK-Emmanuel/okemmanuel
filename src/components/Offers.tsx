@@ -43,7 +43,7 @@ export default function Offers() {
       <div className="section-shell">
         <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <h2 className="font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
-            How I Can Help
+            How I Build
           </h2>
           <p className="max-w-sm text-sm text-muted">
             Premium, high-value engagements — not hourly coding services.

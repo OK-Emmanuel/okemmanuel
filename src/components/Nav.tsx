@@ -3,12 +3,12 @@
 import { useEffect, useState } from "react";
 
 const LINKS = [
-  { label: "Home", href: "#home" },
-  { label: "Solutions", href: "#solutions" },
-  { label: "Case Studies", href: "#case-studies" },
-  { label: "About", href: "#about" },
-  { label: "Ventures", href: "#ventures" },
-  { label: "Speaking", href: "#speaking" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Vision", href: "/vision" },
+  { label: "Work", href: "/work" },
+  { label: "Thinking", href: "/thinking" },
+  { label: "Initiatives", href: "/initiatives" },
 ];
 
 export default function Nav() {
@@ -30,7 +30,7 @@ export default function Nav() {
     >
       <nav className="section-shell flex items-center justify-between h-18 py-4">
         <a
-          href="#home"
+          href="/"
           className="font-serif text-xl tracking-wide text-foreground"
         >
           O.K. <span className="text-gold">Emmanuel</span>
@@ -50,10 +50,10 @@ export default function Nav() {
         </ul>
 
         <a
-          href="#contact"
+          href="/connect"
           className="hidden lg:inline-flex items-center rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-[#08080a] transition-transform hover:scale-[1.03]"
         >
-          Work With Me
+          Connect
         </a>
 
         <button
@@ -100,11 +100,11 @@ export default function Nav() {
             ))}
             <li className="pt-2">
               <a
-                href="#contact"
+                href="/connect"
                 onClick={() => setOpen(false)}
                 className="block rounded-full bg-gold px-5 py-3 text-center text-sm font-semibold text-[#08080a]"
               >
-                Work With Me
+                Connect
               </a>
             </li>
           </ul>
