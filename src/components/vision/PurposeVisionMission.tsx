@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import ScrollBrighten from "../motion/ScrollBrighten";
 
 const STATEMENTS = [
   {
@@ -30,34 +29,20 @@ function StatementBlock({
   index: string;
   text: string;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start 85%", "center 55%"],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 1], [0.25, 1]);
-  const blur = useTransform(scrollYProgress, [0, 1], [6, 0]);
-  const filter = useTransform(blur, (value) => `blur(${value}px)`);
-  const y = useTransform(scrollYProgress, [0, 1], [24, 0]);
-
   return (
-    <div
-      ref={ref}
-      className="flex flex-col gap-4 border-t border-line py-14 md:flex-row md:items-start md:gap-12 md:py-20"
-    >
+    <div className="flex flex-col gap-4 border-t border-line py-14 md:flex-row md:items-start md:gap-12 md:py-20">
       <div className="flex items-center gap-4 md:w-48 md:shrink-0">
         <span className="font-serif text-sm text-gold/50">{index}</span>
         <p className="text-xs uppercase tracking-[0.3em] text-gold">
           {label}
         </p>
       </div>
-      <motion.p
-        style={{ opacity, filter, y }}
+      <ScrollBrighten
+        as="p"
         className="max-w-3xl font-serif text-2xl leading-snug text-foreground md:text-4xl md:leading-snug"
       >
         {text}
-      </motion.p>
+      </ScrollBrighten>
     </div>
   );
 }

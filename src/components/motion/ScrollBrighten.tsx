@@ -6,12 +6,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 type ScrollBrightenProps = {
   children: ReactNode;
   className?: string;
+  as?: "div" | "p" | "span";
 };
 
 /** Brightens and un-blurs content as it scrolls into view, used across vision sections. */
 export default function ScrollBrighten({
   children,
   className,
+  as = "div",
 }: ScrollBrightenProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -24,11 +26,18 @@ export default function ScrollBrighten({
   const filter = useTransform(blur, (value) => `blur(${value}px)`);
   const y = useTransform(scrollYProgress, [0, 1], [24, 0]);
 
-  return (
-    <div ref={ref}>
-      <motion.div style={{ opacity, filter, y }} className={className}>
-        {children}
-      </motion.div>
-    </div>
-  );
+  const props = {
+    ref,
+    style: { opacity, filter, y },
+    className,
+  };
+
+  if (as === "p") {
+    return <motion.p {...props}>{children}</motion.p>;
+  }
+  if (as === "span") {
+    return <motion.span {...props}>{children}</motion.span>;
+  }
+
+  return <motion.div {...props}>{children}</motion.div>;
 }

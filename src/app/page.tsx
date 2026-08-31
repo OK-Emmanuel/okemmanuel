@@ -2,7 +2,6 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import OnePersonManyExpressions from "@/components/OnePersonManyExpressions";
 import Domains from "@/components/Domains";
-import CurrentWork from "@/components/CurrentWork";
 import HomeInitiatives from "@/components/HomeInitiatives";
 import CaseStudyPreview from "@/components/CaseStudyPreview";
 import HomeCta from "@/components/HomeCta";

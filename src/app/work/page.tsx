@@ -3,7 +3,6 @@ import Nav from "@/components/Nav";
 import PageHero from "@/components/PageHero";
 import WorkAreas from "@/components/work/WorkAreas";
 import WhyMe from "@/components/WhyMe";
-import CaseStudies from "@/components/CaseStudies";
 import Offers from "@/components/Offers";
 import Speaking from "@/components/Speaking";
 import HomeCta from "@/components/HomeCta";

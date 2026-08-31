@@ -51,11 +51,11 @@ export default function StagesCarousel({
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartXRef.current = e.clientX;
+    touchStartXRef.current = e.touches[0].clientX;
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
-    touchEndXRef.current = e.clientX;
+    touchEndXRef.current = e.changedTouches[0].clientX;
     handleSwipe();
   };
 
@@ -201,6 +201,7 @@ export default function StagesCarousel({
                         >
                           {/* Placeholder image background */}
                           {item.image ? (
+                            // eslint-disable-next-line @next/next/no-img-element
                             <img
                               src={item.image}
                               alt={item.title}
