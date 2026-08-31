@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import PageHero from "@/components/PageHero";
-import EcosystemStatement from "@/components/initiatives/EcosystemStatement";
+// import EcosystemStatement from "@/components/initiatives/EcosystemStatement";
 import EcosystemMap from "@/components/initiatives/EcosystemMap";
 import InitiativesList from "@/components/initiatives/InitiativesList";
 import HomeCta from "@/components/HomeCta";
@@ -21,10 +21,10 @@ export default function InitiativesPage() {
         <PageHero
           eyebrow="Initiatives"
           title="Building beyond client work."
-          subtitle="A growing ecosystem of ventures and institutions built around one conviction: people and organizations become significantly more capable when equipped with the right knowledge, technology, leadership and opportunity."
+          subtitle="A growing ecosystem of ventures and institutions I am building around one conviction: people and organizations become significantly more capable when equipped with the right knowledge, technology, leadership and opportunity."
           variant="orbit"
         />
-        <EcosystemStatement />
+        {/* <EcosystemStatement /> */}
         <InitiativesList />
         <EcosystemMap />
         <HomeCta />

@@ -1,4 +1,5 @@
 import type { Initiative } from "@/lib/initiatives";
+import Image from "next/image";
 import PlaceholderImage from "../PlaceholderImage";
 import Reveal from "../motion/Reveal";
 
@@ -13,11 +14,24 @@ export default function InitiativeDetail({
 }: InitiativeDetailProps) {
   const image = (
     <Reveal delay={0.1}>
-      <PlaceholderImage
-        alt={`Photograph representing ${initiative.name}`}
-        label={initiative.category}
-        className="aspect-square w-full"
-      />
+      {initiative.image ? (
+        <div className="relative overflow-hidden rounded-2xl border border-line bg-surface-raised aspect-square w-full">
+          <Image
+            src={initiative.image}
+            alt={`Photograph representing ${initiative.name}`}
+            fill
+            priority
+            sizes="(min-width: 1024px) 33vw, 100vw"
+            className="object-cover object-center"
+          />
+        </div>
+      ) : (
+        <PlaceholderImage
+          alt={`Photograph representing ${initiative.name}`}
+          label={initiative.category}
+          className="aspect-square w-full"
+        />
+      )}
     </Reveal>
   );
 

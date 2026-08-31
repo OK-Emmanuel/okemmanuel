@@ -7,9 +7,22 @@ export type Initiative = {
   highlights: string[];
   href: string;
   status: "live" | "soon";
+  image?: string;
 };
 
 export const INITIATIVES: Initiative[] = [
+  {
+    slug: "tech-catalyst",
+    name: "Tech-Catalyst Initiative",
+    category: "People",
+    tagline: "Beyond survival. Building future builders.",
+    description:
+      "A people-development and social-impact initiative helping young people develop the mindset, capabilities and exposure required to become problem-solvers, innovators and responsible leaders.",
+    highlights: ["Leadership & mindset", "Innovation & problem solving", "AI-enabled productivity", "Global competitiveness"],
+    href: "https://catalyst.okemmanuel.tech",
+    status: "live",
+    image: "/olawuni-emmanuel-background.png",
+  },
   {
     slug: "techifice",
     name: "Techifice",
@@ -22,15 +35,17 @@ export const INITIATIVES: Initiative[] = [
     status: "live",
   },
   {
-    slug: "tech-catalyst",
-    name: "Tech-Catalyst Initiative",
-    category: "People",
-    tagline: "Beyond survival. Building future builders.",
+    slug: "wealth-lab",
+    name: "The Wealth Lab",
+    category: "Enterprise",
+    tagline: "Where wealth builders think, build and execute.",
     description:
-      "A people-development and social-impact initiative helping young people develop the mindset, capabilities and exposure required to become problem-solvers, innovators and responsible leaders.",
-    highlights: ["Leadership & mindset", "Innovation & problem solving", "AI-enabled productivity", "Global competitiveness"],
-    href: "/initiatives#tech-catalyst",
+      "A private community and strategic execution platform for founders and serious builders committed to understanding and creating sustainable wealth.",
+    highlights: ["Wealth creation & economic thinking", "Business strategy & positioning", "Technology & AI leverage", "Personal performance"],
+    href: "https://wealthlab.techifice.com",
+    // image: "/olawuni-emmanuel-kayode-headshot.png",
     status: "live",
+    image: "/wealthlab-cover.jpg"
   },
   {
     slug: "yourstore",
@@ -40,19 +55,9 @@ export const INITIATIVES: Initiative[] = [
     description:
       "An e-commerce technology platform helping Nigerian entrepreneurs move from social selling on WhatsApp and Instagram to structured, professional online commerce.",
     highlights: ["Instant storefronts", "Local payments", "WhatsApp commerce", "Order & delivery management"],
-    href: "#",
+    href: "https://yourstore.ng",
     status: "soon",
-  },
-  {
-    slug: "dominus-institute",
-    name: "Dominus Institute",
-    category: "People",
-    tagline: "Developing people for influence, enterprise, leadership and purpose.",
-    description:
-      "An institution for structured studies in business, leadership and faith — developing people intellectually, professionally, strategically and spiritually.",
-    highlights: ["Business & entrepreneurship", "Leadership & management", "Faith & Christian thought", "Purpose & calling"],
-    href: "#",
-    status: "soon",
+    image: "/yourstore-cover.png",
   },
   {
     slug: "mentorship",
@@ -64,16 +69,18 @@ export const INITIATIVES: Initiative[] = [
     highlights: ["Identity & self-discovery", "Career & entrepreneurship", "Decision-making", "Long-term vision"],
     href: "/connect",
     status: "live",
+    image: "/okemmanuel-mentorship.jpg",
   },
   {
-    slug: "wealth-lab",
-    name: "The Wealth Lab",
-    category: "Enterprise",
-    tagline: "Where wealth builders think, build and execute.",
+    slug: "dominus-institute",
+    name: "Dominus Institute",
+    category: "People",
+    tagline: "Developing people for influence, enterprise, leadership and purpose.",
     description:
-      "A private community and strategic execution platform for founders and serious builders committed to understanding and creating sustainable wealth.",
-    highlights: ["Wealth creation & economic thinking", "Business strategy & positioning", "Technology & AI leverage", "Personal performance"],
+      "An institution for structured studies in business, leadership and faith — developing people intellectually, professionally, strategically and spiritually.",
+    highlights: ["Business & entrepreneurship", "Leadership & management", "Faith & Christian thought", "Purpose & calling"],
     href: "#",
     status: "soon",
+    image: "/coming-soon.jpg",
   },
 ];

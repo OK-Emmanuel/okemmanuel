@@ -10,7 +10,7 @@ export default function HomeInitiatives() {
         <Reveal>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <h2 className="font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
-              The ecosystem
+              My Ecosystem
             </h2>
             <a
               href="/initiatives"

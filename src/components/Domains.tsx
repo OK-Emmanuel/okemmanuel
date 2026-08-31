@@ -7,7 +7,7 @@ const DOMAINS = [
     number: "01",
     title: "Build",
     description:
-      "Technology, products, software systems, digital infrastructure and ventures.",
+      "Technology, products, softwares, digital infrastructure and ventures.",
     detail:
       "I turn complex problems and opportunities into useful products, systems and businesses.",
   },

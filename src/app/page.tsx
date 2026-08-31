@@ -16,7 +16,7 @@ export default function Home() {
         <Hero />
         <OnePersonManyExpressions />
         <Domains />
-        <CurrentWork />
+        {/* <CurrentWork /> */}
         <HomeInitiatives />
         <CaseStudyPreview />
         <HomeCta />
