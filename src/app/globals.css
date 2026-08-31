@@ -51,7 +51,7 @@
   --color-accent-blue: var(--accent-blue);
   --font-sans: var(--font-manrope);
   /* --font-serif: var(--font-cormorant); */
-  --font-serif: var(--font-manrope);
+  --font-serif: "General Sans", sans-serif;
 }
 
 * {
