@@ -55,8 +55,8 @@ export default function Hero() {
           className="mt-6 max-w-4xl font-serif text-4xl leading-[1.1]  tracking-tighter  text-foreground sm:text-5xl md:text-6xl lg:text-7xl"
         >
           I build{" "}
-          <span className="text-gold-soft">people, ventures and systems</span>{" "}
-          that turn potential into impact.
+          <span className="text-gold-soft">people, platforms and products</span>{" "}
+          that expand opportunity and elevate livelihoods.
         </motion.h1>
 
         <motion.p
@@ -73,9 +73,9 @@ export default function Hero() {
             href="/work"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-sm font-semibold text-[#08080a]"
+            className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-sm font-semibold text-[white]"
           >
-            Explore My Work
+            Let&apos;s Work
           </motion.a>
           <motion.a
             href="/vision"

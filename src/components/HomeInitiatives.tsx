@@ -3,20 +3,21 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { INITIATIVES } from "@/lib/initiatives";
 import Reveal, { RevealGroup, RevealItem } from "./motion/Reveal";
+import ScrollBrighten from "./motion/ScrollBrighten";
 
 export default function HomeInitiatives() {
   return (
     <section id="initiatives" className="relative border-y border-line bg-surface py-28 md:py-36">
       <div className="section-shell">
-        <Reveal>
+        <div>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-gold">
                 My Ecosystem
               </p>
-              <h2 className="mt-4 font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+              <ScrollBrighten as="h2" className="mt-4 font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
                 Ventures, communities and institutions
-              </h2>
+              </ScrollBrighten>
             </div>
             <Link
               href="/initiatives"
@@ -26,7 +27,7 @@ export default function HomeInitiatives() {
               <ArrowUpRight className="h-4 w-4" strokeWidth={2} />
             </Link>
           </div>
-        </Reveal>
+        </div>
 
         <RevealGroup className="mt-16 flex flex-col divide-y divide-line border-t border-line">
           {INITIATIVES.map((initiative, i) => (

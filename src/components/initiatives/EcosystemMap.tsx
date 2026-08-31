@@ -1,4 +1,5 @@
 import Reveal from "../motion/Reveal";
+import ScrollBrighten from "../motion/ScrollBrighten";
 
 const TRACKS = [
   {
@@ -17,12 +18,12 @@ export default function EcosystemMap() {
   return (
     <section className="relative border-y border-line bg-surface py-28 md:py-36">
       <div className="section-shell">
-        <Reveal>
-          <h2 className="max-w-2xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+        <div>
+          <ScrollBrighten as="h2" className="max-w-2xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
             Develop people. Build enterprises. Leverage technology. Create
             wealth. Shape society.
-          </h2>
-        </Reveal>
+          </ScrollBrighten>
+        </div>
 
         <div className="mt-16 grid gap-10 md:grid-cols-2">
           {TRACKS.map((track, trackIndex) => (

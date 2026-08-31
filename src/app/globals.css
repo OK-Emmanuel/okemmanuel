@@ -1,42 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  /* Default Blue Theme */
-  --background: #0e1338;
-  --surface: #0c032e;
-  --surface-raised: #1a1a20;
-  --foreground: #f2f1ec;
-  --muted: #c6e5f3;
-  --line: rgba(4, 238, 255, 0.1);
-  --gold: #378cee;
-  --gold-soft: #83cdff;
-  --accent-blue: #ff1504;
-}
-
-[data-theme="purple"] {
-  /* Deep Purple Theme */
+  /* Default (Dark Mode base colors) */
   --background: #08080a;
   --surface: #13021dda;
   --surface-raised: #1a1a20;
   --foreground: #f2f1ec;
   --muted: #9b9aa3;
   --line: rgba(242, 241, 236, 0.1);
+
+  /* Default (Purple Accent) */
   --gold: #9e007c;
   --gold-soft: #f000b4;
   --accent-blue: #ffd104; 
 }
 
+/* OVERRIDES FOR COLOR PALETTES (Accents) */
+[data-theme="blue"] {
+  --gold: #378cee;
+  --gold-soft: #83cdff;
+  --accent-blue: #ff1504;
+}
 [data-theme="gold"] {
-  /* Professional Gold Theme */
-  --background: #08080a;
-  --surface: #121216;
-  --surface-raised: #1a1a20;
-  --foreground: #f2f1ec;
-  --muted: #9b9aa3;
-  --line: rgba(242, 241, 236, 0.1);
   --gold: #c9a24b;
   --gold-soft: #e4c878;
   --accent-blue: #ffd104;
+}
+[data-theme="purple"] {
+  --gold: #9e007c;
+  --gold-soft: #f000b4;
+  --accent-blue: #ffd104; 
+}
+
+/* OVERRIDES FOR DARK MODE CUSTOM BACKGROUNDS */
+[data-mode="dark"][data-theme="blue"], 
+html:not([data-mode="light"])[data-theme="blue"] {
+  --background: #0e1338;
+  --surface: #0c032e;
+  --muted: #c6e5f3;
+  --line: rgba(4, 238, 255, 0.1);
+}
+[data-mode="dark"][data-theme="gold"],
+html:not([data-mode="light"])[data-theme="gold"] {
+  --background: #08080a;
+  --surface: #121216;
+}
+[data-mode="dark"][data-theme="purple"],
+html:not([data-mode="light"])[data-theme="purple"] {
+  --background: #08080a;
+  --surface: #13021dda;
+}
+
+/* OVERRIDES FOR LIGHT MODE (Base colors only) */
+[data-mode="light"] {
+  --background: #fdfdfc;
+  --surface: #f4f3ef;
+  --surface-raised: #ffffff;
+  --foreground: #121216;
+  --muted: #6b6a73;
+  --line: rgba(18, 18, 22, 0.15);
 }
 
 @theme inline {
@@ -90,4 +112,3 @@ h1, h2, h3, h4{
     padding-right: 2.5rem;
   }
 }
-

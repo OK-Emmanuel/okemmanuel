@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 type ScrollBrightenProps = {
   children: ReactNode;
   className?: string;
-  as?: "div" | "p" | "span";
+  as?: "div" | "p" | "span" | "h2";
 };
 
 /** Brightens and un-blurs content as it scrolls into view, used across vision sections. */
@@ -37,6 +37,10 @@ export default function ScrollBrighten({
   }
   if (as === "span") {
     return <motion.span {...props}>{children}</motion.span>;
+  }
+
+  if (as === "h2") {
+    return <motion.h2 {...props}>{children}</motion.h2>;
   }
 
   return <motion.div {...props}>{children}</motion.div>;

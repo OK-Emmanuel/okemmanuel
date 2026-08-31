@@ -1,4 +1,5 @@
 import Reveal, { RevealGroup, RevealItem } from "./motion/Reveal";
+import ScrollBrighten from "./motion/ScrollBrighten";
 
 const PILLARS = [
   {
@@ -22,15 +23,15 @@ export default function WhyMe() {
   return (
     <section className="relative overflow-hidden border-y border-line bg-surface py-28 md:py-36">
       <div className="section-shell">
-        <Reveal>
-          <h2 className="max-w-3xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+        <div>
+          <ScrollBrighten as="h2" className="max-w-3xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
             Engineering depth. Strategic thinking. Human communication.
-          </h2>
-          <p className="mt-6 max-w-2xl text-lg text-muted">
+          </ScrollBrighten>
+          <ScrollBrighten as="p" className="mt-6 max-w-2xl text-lg text-muted">
             I don&apos;t approach technology as a collection of tools to
             deploy. I approach it as infrastructure for solving real problems.
-          </p>
-        </Reveal>
+          </ScrollBrighten>
+        </div>
 
         <RevealGroup className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-3">
           {PILLARS.map((pillar, i) => (

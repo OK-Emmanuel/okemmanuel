@@ -1,5 +1,5 @@
 import ParallaxImage from "./motion/ParallaxImage";
-import Reveal from "./motion/Reveal";
+import ScrollBrighten from "./motion/ScrollBrighten";
 
 export default function Speaking() {
   return (
@@ -8,19 +8,19 @@ export default function Speaking() {
       <div className="absolute inset-0 bg-linear-to-r from-background via-background/80 to-background/40" />
 
       <div className="section-shell relative">
-        <Reveal>
-          <h2 className="max-w-xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
-            I don&apos;t just build technology.
+        <div>
+          <ScrollBrighten as="h2" className="max-w-xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+           I build systems, develop people and translate
             <br />
             <span className="italic text-gold-soft">
-              I teach people how to understand it.
+             complexity into action.
             </span>
-          </h2>
-          <p className="mt-6 max-w-xl leading-relaxed text-muted">
+          </ScrollBrighten>
+          <ScrollBrighten as="p" className="mt-6 max-w-xl leading-relaxed text-muted">
             As a speaker, workshop leader and technology educator, I help
             teams, founders and audiences translate complex technical
             decisions into clear, actionable understanding.
-          </p>
+          </ScrollBrighten>
 
           <a
             href="/connect"
@@ -29,7 +29,7 @@ export default function Speaking() {
             Invite Emmanuel to Speak
             <span aria-hidden>→</span>
           </a>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

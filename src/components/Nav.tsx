@@ -45,8 +45,8 @@ export default function Nav() {
             src="/okemmanuel-signature.png"
             alt="O.K. Emmanuel Logo"
             width={200}
-            height={100}
-            className="inline-block mr-2"
+            height={200}
+            className="inline-block mr-2 grayscale"
           />
         </Link>
 

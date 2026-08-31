@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
-import { Manrope, Cormorant, Instrument_Serif } from "next/font/google";
+import { Manrope, Cormorant } from "next/font/google";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 import "./globals.css";
 
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
-});
-
-const InstrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
 });
 
 
@@ -39,10 +33,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${manrope.variable} ${cormorant.variable} ${InstrumentSerif.variable} h-full antialiased`}
+      className={`${manrope.variable} ${cormorant.variable} h-full antialiased`}
     >
+      <head>
+        <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200,300,400,500,600,700&display=swap" rel="stylesheet" />
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         {children}
+        <ThemeSwitcher />
         <GoogleAnalytics />
       </body>
     </html>

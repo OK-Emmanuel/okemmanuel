@@ -1,15 +1,15 @@
 import AmbientBackground from "./AmbientBackground";
-import Reveal from "./motion/Reveal";
+import ScrollBrighten from "./motion/ScrollBrighten";
 
 export default function HomeCta() {
   return (
     <section className="relative overflow-hidden border-t border-line py-28 md:py-36">
       <AmbientBackground variant="beam" />
 
-      <Reveal className="section-shell relative flex flex-col items-start gap-8">
-        <h2 className="max-w-2xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+      <div className="section-shell relative flex flex-col items-start gap-8">
+        <ScrollBrighten as="h2" className="max-w-2xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
           Have a meaningful problem, idea or opportunity worth exploring?
-        </h2>
+        </ScrollBrighten>
         <p className="max-w-xl leading-relaxed text-muted">
           Whether you want to work together, invite me to speak, collaborate
           on a venture, or simply have a strategic conversation — there&apos;s
@@ -30,7 +30,7 @@ export default function HomeCta() {
             See My Work
           </a>
         </div>
-      </Reveal>
+      </div>
     </section>
   );
 }

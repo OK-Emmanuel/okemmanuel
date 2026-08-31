@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Reveal from "../motion/Reveal";
+import ScrollBrighten from "../motion/ScrollBrighten";
 
 export default function AboutBio() {
   return (
@@ -14,8 +15,8 @@ export default function AboutBio() {
             className="w-full"
           />
         </Reveal>
-        <Reveal delay={0.1}>
-          <p className="text-lg leading-relaxed text-muted md:text-xl">
+        <div>
+          <ScrollBrighten as="p" className="text-lg leading-relaxed text-muted md:text-xl">
             I&apos;m a software engineer, technology strategist and
             entrepreneur focused on building useful technology and helping
             people make better decisions around it. Over the years, I&apos;ve
@@ -24,8 +25,8 @@ export default function AboutBio() {
             multidisciplinary experience allows me to approach problems from
             both sides: understanding the technology deeply while keeping
             sight of the people, business and outcomes behind it.
-          </p>
-        </Reveal>
+          </ScrollBrighten>
+        </div>
       </div>
     </section>
   );

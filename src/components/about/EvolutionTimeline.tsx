@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Reveal from "../motion/Reveal";
+import ScrollBrighten from "../motion/ScrollBrighten";
 
 const STAGES = [
   {
@@ -54,17 +55,17 @@ export default function EvolutionTimeline() {
   return (
     <section className="relative border-y border-line bg-surface py-28 md:py-36">
       <div className="section-shell">
-        <Reveal>
-          <h2 className="max-w-2xl mx-auto text-center font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+        <div>
+          <ScrollBrighten as="h2" className="max-w-2xl mx-auto text-center font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
             From making things to building ecosystems.
-          </h2>
-          <p className="mt-4 max-w-4xl mx-auto text-center text-muted">
+          </ScrollBrighten>
+          <ScrollBrighten as="p" className="mt-4 max-w-4xl mx-auto text-center text-muted">
             I picked up my career in computing and technology in 2015, and
             have been building products, systems and businesses ever since.
             Over the years, I have evolved from a maker of things to a
             builder of systems that enable other people to make things.
-          </p>
-        </Reveal>
+          </ScrollBrighten>
+        </div>
 
         <div className="relative mt-16">
           <div
