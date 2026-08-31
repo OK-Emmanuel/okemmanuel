@@ -4,7 +4,7 @@ import ScrollBrighten from "./motion/ScrollBrighten";
 export default function Speaking() {
   return (
     <section id="speaking" className="relative overflow-hidden py-36 md:py-48">
-      <ParallaxImage src="/okemmanuel-speaker.jfif" alt="" />
+      <ParallaxImage src="/okemmanuel-speaker.png" alt="" />
       <div className="absolute inset-0 bg-linear-to-r from-background via-background/80 to-background/40" />
 
       <div className="section-shell relative">

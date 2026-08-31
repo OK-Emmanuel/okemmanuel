@@ -72,10 +72,10 @@ export default function InitiativeDetail({
         target={initiative.status === "live" && initiative.href.startsWith("http") ? "_blank" : undefined}
         rel={initiative.status === "live" && initiative.href.startsWith("http") ? "noopener noreferrer" : undefined}
         aria-disabled={initiative.status === "soon"}
-        className={`mt-8 inline-flex w-fit items-center gap-2 rounded-full border px-8 py-4 text-sm font-semibold transition-colors ${
+        className={`mt-8 inline-flex w-fit items-center gap-2 rounded-full border px-8 py-4 bg-gold text-sm font-semibold transition-colors ${
           initiative.status === "soon"
             ? "pointer-events-none border-line text-muted"
-            : "border-gold/50 text-gold-soft hover:bg-gold hover:text-[#08080a]"
+            : "border-gold/50 text-black hover:bg-gold hover:text-white"
         }`}
       >
         {initiative.status === "soon" ? "Coming soon" : "Explore " + initiative.name}

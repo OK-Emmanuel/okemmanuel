@@ -4,6 +4,8 @@ import PageHero from "@/components/PageHero";
 import AboutBio from "@/components/about/AboutBio";
 import Stages from "@/components/about/Stages";
 import EvolutionTimeline from "@/components/about/EvolutionTimeline";
+import WorkAreas from "@/components/work/WorkAreas";
+import Speaking from "@/components/Speaking";
 import HomeCta from "@/components/HomeCta";
 import Footer from "@/components/Footer";
 
@@ -26,6 +28,8 @@ export default function AboutPage() {
         <AboutBio />
         <Stages />
         <EvolutionTimeline />
+        <Speaking />
+        <WorkAreas />
         <HomeCta />
       </main>
       <Footer />
