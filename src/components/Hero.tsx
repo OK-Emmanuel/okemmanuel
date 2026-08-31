@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import AmbientBackground from "./AmbientBackground";
 
 const container = {
@@ -23,6 +24,17 @@ export default function Hero() {
       id="home"
       className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-20"
     >
+      <div aria-hidden className="absolute inset-0">
+        <Image
+          src="/olawuni-emmanuel-background.png"
+          alt=""
+          fill
+          priority
+          className="object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-linear-to-b from-background/50 via-background/85 to-background" />
+      </div>
+
       <AmbientBackground variant="orbit" />
 
       <motion.div
@@ -35,7 +47,7 @@ export default function Hero() {
           variants={item}
           className="font-sans text-sm uppercase tracking-[0.3em] text-gold"
         >
-          O.K. Emmanuel
+          {/* O.K. Emmanuel */}
         </motion.p>
 
         <motion.h1
@@ -75,14 +87,14 @@ export default function Hero() {
           </motion.a>
         </motion.div>
 
-        <motion.div variants={item} className="mt-8">
+        {/* <motion.div variants={item} className="mt-8">
           <a
             href="/thinking"
             className="text-sm font-semibold text-gold transition-colors hover:text-gold-soft"
           >
             Read My Thinking →
           </a>
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
           variants={item}

@@ -1,23 +1,15 @@
-import AmbientBackground from "./AmbientBackground";
-import PlaceholderImage from "./PlaceholderImage";
+import ParallaxImage from "./motion/ParallaxImage";
 import Reveal from "./motion/Reveal";
 
 export default function Speaking() {
   return (
-    <section id="speaking" className="relative overflow-hidden py-28 md:py-36">
-      <AmbientBackground variant="beam" />
+    <section id="speaking" className="relative overflow-hidden py-36 md:py-48">
+      <ParallaxImage src="/okemmanuel-speaker.jfif" alt="" />
+      <div className="absolute inset-0 bg-linear-to-r from-background via-background/80 to-background/40" />
 
-      <div className="section-shell relative grid gap-10 md:grid-cols-[1fr_1fr] md:items-center">
+      <div className="section-shell relative">
         <Reveal>
-          <PlaceholderImage
-            alt="O.K. Emmanuel speaking at an event"
-            label="The Speaker"
-            className="aspect-4/3 w-full"
-          />
-        </Reveal>
-
-        <Reveal delay={0.1}>
-          <h2 className="font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+          <h2 className="max-w-xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
             I don&apos;t just build technology.
             <br />
             <span className="italic text-gold-soft">

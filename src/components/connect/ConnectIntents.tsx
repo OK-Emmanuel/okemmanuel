@@ -36,7 +36,7 @@ export default function ConnectIntents() {
       <div className="section-shell">
         <Reveal>
           <p className="text-sm uppercase tracking-[0.25em] text-gold">
-            I want to...
+            You want to...
           </p>
         </Reveal>
         <RevealGroup className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

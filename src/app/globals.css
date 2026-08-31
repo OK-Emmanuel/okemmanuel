@@ -7,11 +7,11 @@
   --foreground: #f2f1ec;
   --muted: #9b9aa3;
   --line: rgba(242, 241, 236, 0.1);
-  --gold: #c9a24b;
-  --gold-soft: #e4c878;
-  /* --gold: #eb9dff;
-  --gold-soft: #f000b4; */
-  --accent-blue: #5b7fff;
+  /* --gold: #c9a24b;
+  --gold-soft: #e4c878; */
+  --gold: #eb9dff;
+  --gold-soft: #f000b4;
+  --accent-blue: #ff4800;
 }
 
 @theme inline {

@@ -30,7 +30,7 @@ export default function VisionPage() {
         <Beliefs />
         <Philosophy />
         <Faith />
-        <Questions />
+        {/* <Questions /> */}
         <LongTermVision />
         <HomeCta />
       </main>

@@ -1,19 +1,10 @@
-import Reveal, { RevealGroup, RevealItem } from "./motion/Reveal";
-
-const FLOW = [
-  "Human Potential",
-  "Thinking",
-  "Technology",
-  "Ventures",
-  "Leadership",
-  "Systems",
-  "Impact",
-];
+import Reveal from "./motion/Reveal";
+import FlowOrbit from "./motion/FlowOrbit";
 
 export default function OnePersonManyExpressions() {
   return (
-    <section className="relative border-y border-line bg-surface py-28 md:py-36">
-      <div className="section-shell">
+    <section className="relative overflow-hidden border-y border-line bg-surface py-28 md:py-36">
+      <div className="section-shell grid items-center gap-16 lg:grid-cols-[1.1fr_1fr]">
         <Reveal>
           <h2 className="max-w-3xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
             Different disciplines. One underlying philosophy.
@@ -24,26 +15,16 @@ export default function OnePersonManyExpressions() {
             the outside, but they are connected by one question:
           </p>
           <p className="mt-4 max-w-2xl font-serif text-2xl italic text-gold-soft">
-            How do we turn human potential into meaningful capability and
+            How do we maximize human potential into meaningful capability and
             impact?
           </p>
         </Reveal>
 
-        <RevealGroup className="mt-16 flex flex-wrap items-center gap-3" stagger={0.05}>
-          {FLOW.map((step, i) => (
-            <RevealItem key={step} className="flex items-center gap-3">
-              <span className="rounded-full border border-line bg-surface-raised px-5 py-3 text-sm font-medium text-foreground">
-                {step}
-              </span>
-              {i < FLOW.length - 1 && (
-                <span aria-hidden className="text-gold">
-                  →
-                </span>
-              )}
-            </RevealItem>
-          ))}
-        </RevealGroup>
+        <Reveal delay={0.1}>
+          <FlowOrbit />
+        </Reveal>
       </div>
     </section>
   );
 }
+

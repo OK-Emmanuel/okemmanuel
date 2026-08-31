@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import PlaceholderImage from "./PlaceholderImage";
 import Reveal, { RevealGroup, RevealItem } from "./motion/Reveal";
 
 const PREVIEWS = [
@@ -46,19 +47,26 @@ export default function CaseStudyPreview() {
                 href="/work"
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 300, damping: 22 }}
-                className="group flex h-full flex-col justify-between rounded-2xl border border-line bg-surface p-8 transition-colors hover:border-gold/40"
+                className="group flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-line bg-surface transition-colors hover:border-gold/40"
               >
-                <div>
-                  <h3 className="font-serif text-2xl text-foreground">
-                    {study.name}
-                  </h3>
-                  <p className="mt-2 text-sm font-medium uppercase tracking-wide text-gold">
-                    {study.description}
+                <PlaceholderImage
+                  alt={`Screenshot of ${study.name}`}
+                  label={study.description}
+                  className="h-40 w-full"
+                />
+                <div className="flex flex-1 flex-col justify-between p-8">
+                  <div>
+                    <h3 className="font-serif text-2xl text-foreground">
+                      {study.name}
+                    </h3>
+                    <p className="mt-2 text-sm font-medium uppercase tracking-wide text-gold">
+                      {study.description}
+                    </p>
+                  </div>
+                  <p className="mt-6 leading-relaxed text-gold-soft">
+                    {study.result}
                   </p>
                 </div>
-                <p className="mt-6 leading-relaxed text-gold-soft">
-                  {study.result}
-                </p>
               </motion.a>
             </RevealItem>
           ))}

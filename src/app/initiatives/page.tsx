@@ -3,8 +3,7 @@ import Nav from "@/components/Nav";
 import PageHero from "@/components/PageHero";
 import EcosystemStatement from "@/components/initiatives/EcosystemStatement";
 import EcosystemMap from "@/components/initiatives/EcosystemMap";
-import InitiativesGrid from "@/components/initiatives/InitiativesGrid";
-import TechCatalystDetail from "@/components/initiatives/TechCatalystDetail";
+import InitiativesList from "@/components/initiatives/InitiativesList";
 import HomeCta from "@/components/HomeCta";
 import Footer from "@/components/Footer";
 
@@ -26,14 +25,12 @@ export default function InitiativesPage() {
           variant="orbit"
         />
         <EcosystemStatement />
-        <InitiativesGrid />
+        <InitiativesList />
         <EcosystemMap />
-        <div id="tech-catalyst">
-          <TechCatalystDetail />
-        </div>
         <HomeCta />
       </main>
       <Footer />
     </>
   );
 }
+

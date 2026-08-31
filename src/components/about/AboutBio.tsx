@@ -1,4 +1,4 @@
-import PlaceholderImage from "../PlaceholderImage";
+import Image from "next/image";
 import Reveal from "../motion/Reveal";
 
 export default function AboutBio() {
@@ -6,10 +6,12 @@ export default function AboutBio() {
     <section className="relative py-4 md:py-8">
       <div className="section-shell grid gap-10 md:grid-cols-[1fr_2fr] md:items-center">
         <Reveal>
-          <PlaceholderImage
+          <Image
+            src="/olawuni-emmanuel-kayode-headshot.png"
             alt="Portrait of O.K. Emmanuel"
-            label="The Human"
-            className="aspect-3/4 w-full"
+            width={400}
+            height={400}
+            className="w-full"
           />
         </Reveal>
         <Reveal delay={0.1}>
