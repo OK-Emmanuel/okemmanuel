@@ -1,32 +1,42 @@
 @import "tailwindcss";
 
-/* :root {
-  --background: #08080a;
-  --surface: #1f0622;
-  /* --surface: #121216; */
-  /* --surface-raised: #1a1a20;
-  --foreground: #f2f1ec;
-  --muted: #9b9aa3;
-  --line: rgba(242, 241, 236, 0.1); */
-  /* --gold: #c9a24b;
-  --gold-soft: #e4c878; */
-  /* --gold: #9e007c;
-  --gold-soft: #f000b4;
-  --accent-blue: #ffd104; 
-} */
 :root {
+  /* Default Blue Theme */
   --background: #0e1338;
   --surface: #0c032e;
-  /* --surface: #121216; */
   --surface-raised: #1a1a20;
   --foreground: #f2f1ec;
   --muted: #c6e5f3;
   --line: rgba(4, 238, 255, 0.1);
-  /* --gold: #c9a24b;
-  --gold-soft: #e4c878; */
   --gold: #378cee;
   --gold-soft: #83cdff;
   --accent-blue: #ff1504;
+}
+
+[data-theme="purple"] {
+  /* Deep Purple Theme */
+  --background: #08080a;
+  --surface: #13021dda;
+  --surface-raised: #1a1a20;
+  --foreground: #f2f1ec;
+  --muted: #9b9aa3;
+  --line: rgba(242, 241, 236, 0.1);
+  --gold: #9e007c;
+  --gold-soft: #f000b4;
+  --accent-blue: #ffd104; 
+}
+
+[data-theme="gold"] {
+  /* Professional Gold Theme */
+  --background: #08080a;
+  --surface: #121216;
+  --surface-raised: #1a1a20;
+  --foreground: #f2f1ec;
+  --muted: #9b9aa3;
+  --line: rgba(242, 241, 236, 0.1);
+  --gold: #c9a24b;
+  --gold-soft: #e4c878;
+  --accent-blue: #ffd104;
 }
 
 @theme inline {
