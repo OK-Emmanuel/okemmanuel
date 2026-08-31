@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import PageHero from "@/components/PageHero";
-import Ventures from "@/components/Ventures";
 import EcosystemStatement from "@/components/initiatives/EcosystemStatement";
+import EcosystemMap from "@/components/initiatives/EcosystemMap";
+import InitiativesGrid from "@/components/initiatives/InitiativesGrid";
 import TechCatalystDetail from "@/components/initiatives/TechCatalystDetail";
 import HomeCta from "@/components/HomeCta";
 import Footer from "@/components/Footer";
@@ -10,7 +11,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Initiatives — O.K. Emmanuel",
   description:
-    "Ventures and initiatives beyond client work — Techifice, Tech Catalyst, and what's next.",
+    "The O.K. Emmanuel ecosystem — Techifice, Tech-Catalyst, YourStore.NG, Dominus Institute, Mentorship and The Wealth Lab.",
 };
 
 export default function InitiativesPage() {
@@ -21,10 +22,12 @@ export default function InitiativesPage() {
         <PageHero
           eyebrow="Initiatives"
           title="Building beyond client work."
+          subtitle="A growing ecosystem of ventures and institutions built around one conviction: people and organizations become significantly more capable when equipped with the right knowledge, technology, leadership and opportunity."
           variant="orbit"
         />
         <EcosystemStatement />
-        <Ventures />
+        <InitiativesGrid />
+        <EcosystemMap />
         <div id="tech-catalyst">
           <TechCatalystDetail />
         </div>

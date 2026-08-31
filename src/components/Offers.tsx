@@ -1,3 +1,6 @@
+import HoverCard from "./motion/HoverCard";
+import Reveal, { RevealGroup, RevealItem } from "./motion/Reveal";
+
 const OFFERS = [
   {
     number: "01",
@@ -41,21 +44,21 @@ export default function Offers() {
   return (
     <section className="relative py-28 md:py-36">
       <div className="section-shell">
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-          <h2 className="font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
-            How I Build
-          </h2>
-          <p className="max-w-sm text-sm text-muted">
-            Premium, high-value engagements — not hourly coding services.
-          </p>
-        </div>
+        <Reveal>
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <h2 className="font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+              How I Build
+            </h2>
+            <p className="max-w-sm text-sm text-muted">
+              Premium, high-value engagements — not hourly coding services.
+            </p>
+          </div>
+        </Reveal>
 
-        <div className="mt-16 grid gap-6 lg:grid-cols-2">
+        <RevealGroup className="mt-16 grid gap-6 lg:grid-cols-2">
           {OFFERS.map((offer) => (
-            <div
-              key={offer.number}
-              className="relative flex flex-col justify-between overflow-hidden rounded-2xl border border-line bg-surface p-8 md:p-10"
-            >
+            <RevealItem key={offer.number}>
+              <HoverCard className="relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-line bg-surface p-8 md:p-10">
               <div className="absolute -top-6 -right-4 font-serif text-8xl text-gold/6">
                 {offer.number}
               </div>
@@ -90,9 +93,10 @@ export default function Offers() {
                   </div>
                 ))}
               </div>
-            </div>
+              </HoverCard>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );

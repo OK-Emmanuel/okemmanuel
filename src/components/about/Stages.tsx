@@ -1,3 +1,6 @@
+import HoverCard from "../motion/HoverCard";
+import { RevealGroup, RevealItem } from "../motion/Reveal";
+
 const STAGES = [
   {
     title: "The Builder",
@@ -30,21 +33,20 @@ export default function Stages() {
   return (
     <section className="relative py-20 md:py-28">
       <div className="section-shell">
-        <div className="grid gap-6 md:grid-cols-2">
+        <RevealGroup className="grid gap-6 md:grid-cols-2">
           {STAGES.map((stage) => (
-            <div
-              key={stage.title}
-              className="rounded-2xl border border-line bg-surface p-8"
-            >
+            <RevealItem key={stage.title}>
+              <HoverCard className="rounded-2xl border border-line bg-surface p-8">
               <h3 className="font-serif text-2xl text-gold-soft">
                 {stage.title}
               </h3>
               <p className="mt-3 leading-relaxed text-muted">
                 {stage.description}
               </p>
-            </div>
+              </HoverCard>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );

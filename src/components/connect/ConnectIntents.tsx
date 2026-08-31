@@ -1,3 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Reveal, { RevealGroup, RevealItem } from "../motion/Reveal";
+
 const INTENTS = [
   {
     title: "Work with me",
@@ -29,16 +34,20 @@ export default function ConnectIntents() {
   return (
     <section className="relative py-4 md:py-8">
       <div className="section-shell">
-        <p className="text-sm uppercase tracking-[0.25em] text-gold">
-          I want to...
-        </p>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Reveal>
+          <p className="text-sm uppercase tracking-[0.25em] text-gold">
+            I want to...
+          </p>
+        </Reveal>
+        <RevealGroup className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {INTENTS.map((intent) => (
-            <a
-              key={intent.title}
-              href="#form"
-              className="group flex flex-col justify-between rounded-2xl border border-line bg-surface p-8 transition-colors hover:border-gold/40"
-            >
+            <RevealItem key={intent.title}>
+              <motion.a
+                href="#form"
+                whileHover={{ y: -6 }}
+                transition={{ type: "spring", stiffness: 300, damping: 22 }}
+                className="group flex h-full flex-col justify-between rounded-2xl border border-line bg-surface p-8 transition-colors hover:border-gold/40"
+              >
               <div>
                 <h3 className="font-serif text-xl text-foreground">
                   {intent.title}
@@ -51,9 +60,10 @@ export default function ConnectIntents() {
                 Start here
                 <span aria-hidden>→</span>
               </span>
-            </a>
+              </motion.a>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );

@@ -1,3 +1,5 @@
+import Reveal, { RevealGroup, RevealItem } from "./motion/Reveal";
+
 const FLOW = [
   "Human Potential",
   "Thinking",
@@ -12,22 +14,24 @@ export default function OnePersonManyExpressions() {
   return (
     <section className="relative border-y border-line bg-surface py-28 md:py-36">
       <div className="section-shell">
-        <h2 className="max-w-3xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
-          Different disciplines. One underlying philosophy.
-        </h2>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-          My work spans technology, entrepreneurship, leadership, education
-          and human development. They may look like different fields from
-          the outside, but they are connected by one question:
-        </p>
-        <p className="mt-4 max-w-2xl font-serif text-2xl italic text-gold-soft">
-          How do we turn human potential into meaningful capability and
-          impact?
-        </p>
+        <Reveal>
+          <h2 className="max-w-3xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+            Different disciplines. One underlying philosophy.
+          </h2>
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+            My work spans technology, entrepreneurship, leadership, education
+            and human development. They may look like different fields from
+            the outside, but they are connected by one question:
+          </p>
+          <p className="mt-4 max-w-2xl font-serif text-2xl italic text-gold-soft">
+            How do we turn human potential into meaningful capability and
+            impact?
+          </p>
+        </Reveal>
 
-        <div className="mt-16 flex flex-wrap items-center gap-3">
+        <RevealGroup className="mt-16 flex flex-wrap items-center gap-3" stagger={0.05}>
           {FLOW.map((step, i) => (
-            <div key={step} className="flex items-center gap-3">
+            <RevealItem key={step} className="flex items-center gap-3">
               <span className="rounded-full border border-line bg-surface-raised px-5 py-3 text-sm font-medium text-foreground">
                 {step}
               </span>
@@ -36,9 +40,9 @@ export default function OnePersonManyExpressions() {
                   →
                 </span>
               )}
-            </div>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );

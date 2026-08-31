@@ -1,3 +1,6 @@
+import HoverCard from "./motion/HoverCard";
+import Reveal, { RevealGroup, RevealItem } from "./motion/Reveal";
+
 const CASE_STUDIES = [
   {
     name: "Homifice",
@@ -40,20 +43,20 @@ export default function CaseStudies() {
   return (
     <section id="case-studies" className="relative py-28 md:py-36">
       <div className="section-shell">
-        <h2 className="font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
-          Case Studies
-        </h2>
-        <p className="mt-4 max-w-2xl text-muted">
-          Every project here is a business case — a problem solved, not just
-          a feature shipped.
-        </p>
+        <Reveal>
+          <h2 className="font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+            Case Studies
+          </h2>
+          <p className="mt-4 max-w-2xl text-muted">
+            Every project here is a business case — a problem solved, not just
+            a feature shipped.
+          </p>
+        </Reveal>
 
-        <div className="mt-16 flex flex-col gap-8">
+        <RevealGroup className="mt-16 flex flex-col gap-8">
           {CASE_STUDIES.map((study) => (
-            <article
-              key={study.name}
-              className="grid gap-8 rounded-2xl border border-line bg-surface p-8 md:grid-cols-[1fr_2fr] md:p-10"
-            >
+            <RevealItem key={study.name}>
+              <HoverCard className="grid gap-8 rounded-2xl border border-line bg-surface p-8 md:grid-cols-[1fr_2fr] md:p-10">
               <div>
                 <h3 className="font-serif text-2xl text-foreground md:text-3xl">
                   {study.name}
@@ -111,9 +114,10 @@ export default function CaseStudies() {
                   </p>
                 </div>
               </div>
-            </article>
+              </HoverCard>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );

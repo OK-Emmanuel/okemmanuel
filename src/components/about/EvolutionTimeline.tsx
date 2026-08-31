@@ -1,3 +1,5 @@
+import Reveal, { RevealGroup, RevealItem } from "../motion/Reveal";
+
 const STAGES = [
   { title: "Design", description: "Visual communication and creative work." },
   { title: "Engineering", description: "Software, systems and technical capability." },
@@ -21,20 +23,22 @@ export default function EvolutionTimeline() {
   return (
     <section className="relative border-y border-line bg-surface py-28 md:py-36">
       <div className="section-shell">
-        <h2 className="max-w-2xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
-          From making things to building ecosystems.
-        </h2>
-        <p className="mt-4 max-w-xl text-muted">
-          A timeline of evolution, not a preservation of obsolete labels.
-        </p>
+        <Reveal>
+          <h2 className="max-w-2xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+            From making things to building ecosystems.
+          </h2>
+          <p className="mt-4 max-w-xl text-muted">
+            A timeline of evolution, not a preservation of obsolete labels.
+          </p>
+        </Reveal>
 
-        <div className="relative mt-16 flex flex-col gap-10 md:gap-12">
+        <RevealGroup className="relative mt-16 flex flex-col gap-10 md:gap-12">
           <div
             aria-hidden
             className="absolute left-[0.9rem] top-2 bottom-2 hidden w-px bg-line md:block"
           />
           {STAGES.map((stage, i) => (
-            <div key={stage.title} className="relative flex gap-6 md:gap-10">
+            <RevealItem key={stage.title} className="relative flex gap-6 md:gap-10">
               <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/50 bg-surface font-serif text-sm text-gold">
                 {i + 1}
               </div>
@@ -46,9 +50,9 @@ export default function EvolutionTimeline() {
                   {stage.description}
                 </p>
               </div>
-            </div>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );

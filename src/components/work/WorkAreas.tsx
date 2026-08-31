@@ -1,3 +1,6 @@
+import HoverCard from "../motion/HoverCard";
+import { RevealGroup, RevealItem } from "../motion/Reveal";
+
 const AREAS = [
   {
     title: "Technology",
@@ -27,12 +30,10 @@ const AREAS = [
 export default function WorkAreas() {
   return (
     <section className="relative py-4 md:py-8">
-      <div className="section-shell grid gap-6 md:grid-cols-2">
+      <RevealGroup className="section-shell grid gap-6 md:grid-cols-2">
         {AREAS.map((area) => (
-          <div
-            key={area.title}
-            className="rounded-2xl border border-line bg-surface p-8"
-          >
+          <RevealItem key={area.title}>
+            <HoverCard className="h-full rounded-2xl border border-line bg-surface p-8">
             <h3 className="font-serif text-2xl text-foreground">
               {area.title}
             </h3>
@@ -46,9 +47,10 @@ export default function WorkAreas() {
                 </li>
               ))}
             </ul>
-          </div>
+            </HoverCard>
+          </RevealItem>
         ))}
-      </div>
+      </RevealGroup>
     </section>
   );
 }

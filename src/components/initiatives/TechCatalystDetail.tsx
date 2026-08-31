@@ -1,3 +1,6 @@
+import PlaceholderImage from "../PlaceholderImage";
+import Reveal from "../motion/Reveal";
+
 const FOCUS_AREAS = [
   "Leadership",
   "AI & technology",
@@ -8,8 +11,8 @@ const FOCUS_AREAS = [
 export default function TechCatalystDetail() {
   return (
     <section className="relative border-y border-line bg-surface py-28 md:py-36">
-      <div className="section-shell grid gap-10 md:grid-cols-[2fr_1fr] md:items-start">
-        <div>
+      <div className="section-shell grid gap-10 md:grid-cols-[1.5fr_1fr] md:items-center">
+        <Reveal>
           <h2 className="font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
             Tech Catalyst Initiative
           </h2>
@@ -30,17 +33,23 @@ export default function TechCatalystDetail() {
               </span>
             ))}
           </div>
-        </div>
 
-        <div className="flex md:justify-end">
           <a
             href="/connect"
-            className="inline-flex items-center gap-2 rounded-full border border-gold/50 px-8 py-4 text-sm font-semibold text-gold-soft transition-colors hover:bg-gold hover:text-[#08080a]"
+            className="mt-8 inline-flex items-center gap-2 rounded-full border border-gold/50 px-8 py-4 text-sm font-semibold text-gold-soft transition-colors hover:bg-gold hover:text-[#08080a]"
           >
             Explore Tech Catalyst
             <span aria-hidden>→</span>
           </a>
-        </div>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <PlaceholderImage
+            alt="Tech Catalyst Initiative workshop"
+            label="Tech Catalyst"
+            className="aspect-square w-full"
+          />
+        </Reveal>
       </div>
     </section>
   );

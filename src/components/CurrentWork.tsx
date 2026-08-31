@@ -1,3 +1,6 @@
+import HoverCard from "./motion/HoverCard";
+import Reveal, { RevealGroup, RevealItem } from "./motion/Reveal";
+
 const CATEGORIES = [
   {
     title: "Technology & Products",
@@ -30,16 +33,16 @@ export default function CurrentWork() {
   return (
     <section className="relative border-y border-line bg-surface py-28 md:py-36">
       <div className="section-shell">
-        <h2 className="font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
-          What I&apos;m building now
-        </h2>
+        <Reveal>
+          <h2 className="font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+            What I&apos;m building now
+          </h2>
+        </Reveal>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
+        <RevealGroup className="mt-16 grid gap-6 md:grid-cols-2">
           {CATEGORIES.map((category) => (
-            <div
-              key={category.title}
-              className="rounded-2xl border border-line bg-surface-raised p-8"
-            >
+            <RevealItem key={category.title}>
+              <HoverCard className="rounded-2xl border border-line bg-surface-raised p-8">
               <h3 className="font-serif text-xl text-foreground">
                 {category.title}
               </h3>
@@ -63,9 +66,10 @@ export default function CurrentWork() {
                 Explore
                 <span aria-hidden>→</span>
               </a>
-            </div>
+              </HoverCard>
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   );

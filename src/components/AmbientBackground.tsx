@@ -1,3 +1,8 @@
+"use client";
+
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+
 type AmbientBackgroundProps = {
   variant?: "grid" | "orbit" | "beam";
   className?: string;
@@ -7,13 +12,28 @@ export default function AmbientBackground({
   variant = "grid",
   className = "",
 }: AmbientBackgroundProps) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const yGold = useTransform(scrollYProgress, [0, 1], [-60, 60]);
+  const yBlue = useTransform(scrollYProgress, [0, 1], [40, -40]);
+
   return (
     <div
+      ref={ref}
       aria-hidden
       className={`pointer-events-none absolute inset-0 overflow-hidden ${className}`}
     >
-      <div className="absolute -top-40 left-1/2 h-144 w-xl -translate-x-1/2 rounded-full bg-gold/10 blur-[120px]" />
-      <div className="absolute top-1/3 -right-32 h-104 w-104 rounded-full bg-accent-blue/10 blur-[110px]" />
+      <motion.div
+        style={{ y: yGold }}
+        className="absolute -top-40 left-1/2 h-144 w-xl -translate-x-1/2 rounded-full bg-gold/10 blur-[120px]"
+      />
+      <motion.div
+        style={{ y: yBlue }}
+        className="absolute top-1/3 -right-32 h-104 w-104 rounded-full bg-accent-blue/10 blur-[110px]"
+      />
 
       {variant === "grid" && (
         <svg className="absolute inset-0 h-full w-full opacity-[0.06]">

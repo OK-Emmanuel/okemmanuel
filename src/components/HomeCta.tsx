@@ -1,11 +1,12 @@
 import AmbientBackground from "./AmbientBackground";
+import Reveal from "./motion/Reveal";
 
 export default function HomeCta() {
   return (
     <section className="relative overflow-hidden border-t border-line py-28 md:py-36">
       <AmbientBackground variant="beam" />
 
-      <div className="section-shell relative flex flex-col items-start gap-8">
+      <Reveal className="section-shell relative flex flex-col items-start gap-8">
         <h2 className="max-w-2xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
           Have a meaningful problem, idea or opportunity worth exploring?
         </h2>
@@ -29,7 +30,7 @@ export default function HomeCta() {
             See My Work
           </a>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

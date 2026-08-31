@@ -1,7 +1,9 @@
+import Reveal from "../motion/Reveal";
+
 export default function Faith() {
   return (
     <section className="relative py-28 md:py-36">
-      <div className="section-shell max-w-3xl">
+      <Reveal className="section-shell max-w-3xl">
         <h2 className="font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
           Faith &amp; spirituality
         </h2>
@@ -12,7 +14,7 @@ export default function Faith() {
           part of who I am, and it informs the way I build, lead and
           develop the people around me.
         </p>
-      </div>
+      </Reveal>
     </section>
   );
 }

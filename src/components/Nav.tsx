@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const LINKS = [
@@ -29,12 +30,12 @@ export default function Nav() {
       }`}
     >
       <nav className="section-shell flex items-center justify-between h-18 py-4">
-        <a
+        <Link
           href="/"
           className="font-serif text-xl tracking-wide text-foreground"
         >
           O.K. <span className="text-gold">Emmanuel</span>
-        </a>
+        </Link>
 
         <ul className="hidden lg:flex items-center gap-8 text-sm text-muted">
           {LINKS.map((link) => (
