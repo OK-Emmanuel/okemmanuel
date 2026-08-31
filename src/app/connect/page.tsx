@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import PageHero from "@/components/PageHero";
 import ConnectIntents from "@/components/connect/ConnectIntents";
-import ConnectForm from "@/components/connect/ConnectForm";
+// import ConnectForm from "@/components/connect/ConnectForm";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function ConnectPage() {
           variant="beam"
         />
         <ConnectIntents />
-        <ConnectForm />
+        {/* <ConnectForm /> */}
       </main>
       <Footer />
     </>

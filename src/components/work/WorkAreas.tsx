@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Settings, Target, Lightbulb, Mic } from "lucide-react";
 import HoverCard from "../motion/HoverCard";
 
 const AREAS = [
@@ -9,14 +10,14 @@ const AREAS = [
     description:
       "Building systems that work. From software architecture to AI-powered solutions, I create technology that solves real problems and scales with purpose.",
     items: ["Software engineering", "Product development", "AI systems", "Architecture & digital infrastructure"],
-    icon: "⚙️",
+    icon: Settings,
   },
   {
     title: "Strategy",
     description:
       "Connecting dots between possibility and execution. I help organizations and founders think clearly about technology, positioning, and competitive advantage.",
     items: ["Product strategy", "Business systems", "Digital transformation", "AI adoption & venture strategy"],
-    icon: "🎯",
+    icon: Target,
   },
   {
     title: "Advisory",
@@ -25,7 +26,7 @@ const AREAS = [
     items: [
       "For organizations, founders and leaders requiring strategic thinking on technology and product decisions.",
     ],
-    icon: "💡",
+    icon: Lightbulb,
   },
   {
     title: "Speaking",
@@ -37,7 +38,7 @@ const AREAS = [
       "Leadership & human potential",
       "Building in Africa",
     ],
-    icon: "🎤",
+    icon: Mic,
   },
 ];
 
@@ -103,9 +104,10 @@ export default function WorkAreas() {
                       {area.title}
                     </h3>
                   </div>
-                  <span className="text-3xl opacity-60 transition-opacity group-hover:opacity-100">
-                    {area.icon}
-                  </span>
+                  <area.icon
+                    className="h-7 w-7 shrink-0 text-gold/60 transition-colors group-hover:text-gold"
+                    strokeWidth={1.5}
+                  />
                 </div>
 
                 {/* Description */}
