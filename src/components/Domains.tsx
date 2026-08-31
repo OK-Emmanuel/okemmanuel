@@ -41,17 +41,17 @@ export default function Domains() {
 
       <div className="section-shell relative">
         <Reveal>
-          <h2 className="max-w-2xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+          <h2 className="font-serif text-center text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
             What I do
           </h2>
         </Reveal>
 
         {/* flat org-chart rail: heading trunk splits into two branches above the grid columns */}
-        <div aria-hidden className="relative mt-10 hidden h-10 sm:block">
-          <div className="absolute left-1/2 top-0 h-1/2 w-px -translate-x-1/2 bg-line" />
+        <div aria-hidden className="relative mt-5 hidden h-24 sm:block">
+          <div className="absolute left-1/2 top-0 h-1/2 w-1 -translate-x-1/2 bg-line" />
           <div className="absolute left-1/4 right-1/4 top-1/2 h-px bg-line" />
           <div className="absolute left-1/4 top-1/2 h-1/2 w-px -translate-x-1/2 bg-line" />
-          <div className="absolute right-1/4 top-1/2 h-1/2 w-px translate-x-1/2 bg-line" />
+          <div className="absolute right-1/4 top-1/2 h-1/2 w-px -translate-x-1/2 bg-line" />
         </div>
 
         <RevealGroup className="mt-6 grid gap-6 sm:mt-0 sm:grid-cols-2">

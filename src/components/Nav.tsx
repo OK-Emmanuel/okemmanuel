@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const LINKS = [
   { label: "Home", href: "/" },
@@ -30,11 +31,23 @@ export default function Nav() {
       }`}
     >
       <nav className="section-shell flex items-center justify-between h-18 py-4">
-        <Link
+        {/* <Link
           href="/"
           className="font-serif text-xl tracking-wide text-foreground"
         >
           O.K. <span className="text-gold">Emmanuel</span>
+        </Link> */}
+        <Link
+          href="/"
+          className="font-serif text-xl tracking-wide text-foreground"
+        >
+         <Image
+            src="/okemmanuel-signature.png"
+            alt="O.K. Emmanuel Logo"
+            width={200}
+            height={100}
+            className="inline-block mr-2"
+          />
         </Link>
 
         <ul className="hidden lg:flex items-center gap-8 text-sm text-muted">

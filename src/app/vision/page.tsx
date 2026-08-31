@@ -28,7 +28,7 @@ export default function VisionPage() {
         />
         <PurposeVisionMission />
         <Beliefs />
-        <Philosophy />
+        {/* <Philosophy /> */}
         <Faith />
         {/* <Questions /> */}
         <LongTermVision />

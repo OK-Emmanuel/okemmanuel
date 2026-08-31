@@ -1,17 +1,32 @@
 @import "tailwindcss";
 
-:root {
+/* :root {
   --background: #08080a;
-  --surface: #121216;
-  --surface-raised: #1a1a20;
+  --surface: #1f0622;
+  /* --surface: #121216; */
+  /* --surface-raised: #1a1a20;
   --foreground: #f2f1ec;
   --muted: #9b9aa3;
-  --line: rgba(242, 241, 236, 0.1);
+  --line: rgba(242, 241, 236, 0.1); */
   /* --gold: #c9a24b;
   --gold-soft: #e4c878; */
-  --gold: #9ad1ff;
+  /* --gold: #9e007c;
   --gold-soft: #f000b4;
-  --accent-blue: #ffd104;
+  --accent-blue: #ffd104; 
+} */
+:root {
+  --background: #0e1338;
+  --surface: #0c032e;
+  /* --surface: #121216; */
+  --surface-raised: #1a1a20;
+  --foreground: #f2f1ec;
+  --muted: #c6e5f3;
+  --line: rgba(4, 238, 255, 0.1);
+  /* --gold: #c9a24b;
+  --gold-soft: #e4c878; */
+  --gold: #378cee;
+  --gold-soft: #83cdff;
+  --accent-blue: #ff1504;
 }
 
 @theme inline {
@@ -25,7 +40,8 @@
   --color-gold-soft: var(--gold-soft);
   --color-accent-blue: var(--accent-blue);
   --font-sans: var(--font-manrope);
-  --font-serif: var(--font-cormorant);
+  /* --font-serif: var(--font-cormorant); */
+  --font-serif: var(--font-manrope);
 }
 
 * {
@@ -41,6 +57,10 @@ body {
   color: var(--foreground);
 }
 
+h1, h2, h3, h4{
+  font-weight: 700;
+  font-kerning: none;
+}
 ::selection {
   background: var(--gold);
   color: #08080a;

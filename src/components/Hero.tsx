@@ -52,10 +52,10 @@ export default function Hero() {
 
         <motion.h1
           variants={item}
-          className="mt-6 max-w-4xl font-serif text-4xl leading-[1.1] text-foreground sm:text-5xl md:text-6xl lg:text-7xl"
+          className="mt-6 max-w-4xl font-serif text-4xl leading-[1.1]  tracking-tighter  text-foreground sm:text-5xl md:text-6xl lg:text-7xl"
         >
           I build{" "}
-          <span className="italic text-gold-soft">people, ventures and systems</span>{" "}
+          <span className="text-gold-soft">people, ventures and systems</span>{" "}
           that turn potential into impact.
         </motion.h1>
 
