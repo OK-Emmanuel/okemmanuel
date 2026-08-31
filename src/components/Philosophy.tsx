@@ -1,4 +1,5 @@
 import Reveal, { RevealGroup, RevealItem } from "./motion/Reveal";
+import HoverCard from "./motion/HoverCard";
 
 const PRINCIPLES = [
   {
@@ -20,32 +21,37 @@ const PRINCIPLES = [
 
 export default function Philosophy() {
   return (
-    <section className="relative border-y border-line bg-surface py-28 md:py-36">
-      <div className="section-shell">
+    <section className="relative overflow-hidden border-y border-line bg-surface py-28 md:py-36">
+      <span
+        aria-hidden
+        className="pointer-events-none absolute -top-16 left-4 select-none font-serif text-[14rem] leading-none text-gold/5 md:text-[20rem]"
+      >
+        &ldquo;
+      </span>
+      <div className="section-shell relative">
         <Reveal>
-          <h2 className="max-w-3xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
-            Build what matters. Automate what repeats. Scale what works.
+          <p className="text-xs uppercase tracking-[0.3em] text-gold">
+            Philosophy
+          </p>
+          <h2 className="mt-4 max-w-3xl font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
+            I build what matters. Automate what repeats. Scale what works.
           </h2>
         </Reveal>
 
-        <RevealGroup className="relative mt-16 flex flex-col gap-12 md:gap-16">
-          <div
-            aria-hidden
-            className="absolute left-[0.9rem] top-2 bottom-2 hidden w-px bg-line md:block"
-          />
+        <RevealGroup className="mt-16 grid gap-6 md:grid-cols-3">
           {PRINCIPLES.map((principle, i) => (
-            <RevealItem key={principle.title} className="relative flex gap-6 md:gap-10">
-              <div className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/50 bg-surface font-serif text-sm text-gold">
-                {i + 1}
-              </div>
-              <div>
-                <h3 className="font-serif text-xl text-foreground md:text-2xl">
+            <RevealItem key={principle.title}>
+              <HoverCard className="group h-full rounded-2xl border border-line bg-surface-raised p-8 transition-colors hover:border-gold/50">
+                <span className="font-serif text-sm text-gold/50">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-4 font-serif text-xl text-foreground md:text-2xl">
                   {principle.title}
                 </h3>
-                <p className="mt-2 max-w-2xl leading-relaxed text-muted">
+                <p className="mt-3 leading-relaxed text-muted transition-colors group-hover:text-foreground/80">
                   {principle.description}
                 </p>
-              </div>
+              </HoverCard>
             </RevealItem>
           ))}
         </RevealGroup>
