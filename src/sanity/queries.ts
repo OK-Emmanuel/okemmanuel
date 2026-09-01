@@ -58,3 +58,29 @@ export const FEATURED_POSTS_QUERY = groq`
     "category": category->{title, "slug": slug.current}
   }
 `;
+
+export const ALL_POSTS_QUERY = groq`
+  *[_type == "post"] | order(publishedAt desc) {
+    _id,
+    title,
+    "slug": slug.current,
+    excerpt,
+    coverImage,
+    tags,
+    publishedAt,
+    featured,
+    "category": category->{title, "slug": slug.current}
+  }
+`;
+
+export const RELATED_POSTS_QUERY = groq`
+  *[_type == "post" && category->slug.current == $categorySlug && _id != $currentPostId] | order(publishedAt desc) [0...3] {
+    _id,
+    title,
+    "slug": slug.current,
+    excerpt,
+    coverImage,
+    publishedAt,
+    "category": category->{title, "slug": slug.current}
+  }
+`;

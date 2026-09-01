@@ -6,6 +6,8 @@ import Offers from "@/components/Offers";
 import Speaking from "@/components/Speaking";
 import HomeCta from "@/components/HomeCta";
 import Footer from "@/components/Footer";
+import CaseStudies from "@/components/CaseStudies";
+import CaseStudyPreview from "@/components/CaseStudyPreview";
 
 export const metadata: Metadata = {
   title: "Work — O.K. Emmanuel",
@@ -24,7 +26,8 @@ export default function WorkPage() {
           variant="grid"
         />
         <WhyMe />
-        {/* <CaseStudies /> */}
+        <CaseStudies />
+        <CaseStudyPreview />
         <Offers />
         <Speaking />
         <HomeCta />

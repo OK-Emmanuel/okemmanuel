@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
-import PageHero from "@/components/PageHero";
 import ThinkingLibrary from "@/components/thinking/ThinkingLibrary";
 import HomeCta from "@/components/HomeCta";
 import Footer from "@/components/Footer";
@@ -16,12 +15,16 @@ export default function ThinkingPage() {
     <>
       <Nav />
       <main className="flex-1">
-        <PageHero
-          eyebrow="Thinking"
-          title="Ideas, frameworks and the questions behind the work."
-          subtitle="I don't publish content merely because I know something. I publish because it reveals how I think."
-          variant="grid"
-        />
+        <section className="relative border-b border-line bg-surface pt-32 pb-16 md:pt-48 md:pb-24">
+          <div className="section-shell">
+            <h1 className="max-w-4xl font-serif text-4xl leading-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
+              Thinking &amp; Notes
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg text-muted md:text-xl">
+              Essays, frameworks, and observations on building systems, leading people, and shaping society.
+            </p>
+          </div>
+        </section>
         <ThinkingLibrary />
         <HomeCta />
       </main>

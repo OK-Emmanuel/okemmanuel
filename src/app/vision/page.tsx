@@ -7,6 +7,8 @@ import Faith from "@/components/vision/Faith";
 import LongTermVision from "@/components/vision/LongTermVision";
 import HomeCta from "@/components/HomeCta";
 import Footer from "@/components/Footer";
+import Philosophy from "@/components/Philosophy";
+
 
 export const metadata: Metadata = {
   title: "Vision — O.K. Emmanuel",
@@ -25,11 +27,10 @@ export default function VisionPage() {
           variant="beam"
         />
         <PurposeVisionMission />
-        <Beliefs />
-        {/* <Philosophy /> */}
+        <Philosophy />
         <Faith />
-        {/* <Questions /> */}
         <LongTermVision />
+        <Beliefs />
         <HomeCta />
       </main>
       <Footer />
