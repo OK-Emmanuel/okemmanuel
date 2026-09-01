@@ -1,3 +1,7 @@
+"use client";
+
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
@@ -6,9 +10,29 @@ import Reveal, { RevealGroup, RevealItem } from "./motion/Reveal";
 import ScrollBrighten from "./motion/ScrollBrighten";
 
 export default function HomeInitiatives() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
   return (
-    <section id="initiatives" className="relative border-y border-line bg-surface py-28 md:py-36">
-      <div className="section-shell">
+    <section ref={sectionRef} id="initiatives" className="relative border-y border-line bg-surface py-28 md:py-36 overflow-hidden">
+      {/* Background video with parallax */}
+      <motion.video
+        autoPlay
+        muted
+        loop
+        playsInline
+        style={{ y }}
+        className="absolute inset-0 h-full w-full object-cover opacity-5"
+        aria-hidden="true"
+      >
+        <source src="/okemmanuel-video.mp4" type="video/mp4" />
+      </motion.video>
+      
+      <div className="section-shell relative z-10">
         <div>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -30,7 +54,7 @@ export default function HomeInitiatives() {
         </div>
 
         <RevealGroup className="mt-16 flex flex-col divide-y divide-line border-t border-line">
-          {INITIATIVES.map((initiative, i) => (
+          {INITIATIVES.slice(0, 3).map((initiative, i) => (
             <RevealItem key={initiative.slug}>
               <Link
                 href={initiative.href}
