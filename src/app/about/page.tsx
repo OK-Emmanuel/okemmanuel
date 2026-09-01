@@ -5,9 +5,11 @@ import AboutBio from "@/components/about/AboutBio";
 import Stages from "@/components/about/Stages";
 import EvolutionTimeline from "@/components/about/EvolutionTimeline";
 import WorkAreas from "@/components/work/WorkAreas";
-import Speaking from "@/components/Speaking";
+import MasonryGallery from "@/components/ui/MasonryGallery";
 import HomeCta from "@/components/HomeCta";
 import Footer from "@/components/Footer";
+import { client } from "@/sanity/client";
+import { GALLERY_QUERY } from "@/sanity/queries";
 
 export const metadata: Metadata = {
   title: "About — O.K. Emmanuel",
@@ -15,7 +17,9 @@ export const metadata: Metadata = {
     "Who I am beneath the job title: builder, strategist, developer of people, and catalyst — still evolving.",
 };
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const galleryImages = await client.fetch(GALLERY_QUERY, {}, { next: { revalidate: 60 } }).catch(() => []);
+
   return (
     <>
       <Nav />
@@ -28,7 +32,7 @@ export default function AboutPage() {
         <AboutBio />
         <Stages />
         <EvolutionTimeline />
-        <Speaking />
+        <MasonryGallery images={galleryImages} />
         <WorkAreas />
         <HomeCta />
       </main>

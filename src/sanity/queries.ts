@@ -84,3 +84,60 @@ export const RELATED_POSTS_QUERY = groq`
     "category": category->{title, "slug": slug.current}
   }
 `;
+
+export const PROJECTS_QUERY = groq`
+  *[_type == "project"] | order(_createdAt desc) {
+    _id,
+    title,
+    "slug": slug.current,
+    projectType,
+    clientOrOrganization,
+    role,
+    timeline,
+    coverImage,
+    summary,
+    liveLink
+  }
+`;
+
+export const PROJECT_BY_SLUG_QUERY = groq`
+  *[_type == "project" && slug.current == $slug][0] {
+    _id,
+    title,
+    "slug": slug.current,
+    projectType,
+    clientOrOrganization,
+    role,
+    timeline,
+    coverImage,
+    summary,
+    context,
+    outcomes,
+    fullStory,
+    gallery,
+    liveLink
+  }
+`;
+
+export const EVENTS_QUERY = groq`
+  *[_type == "event"] | order(eventDate desc) {
+    _id,
+    title,
+    eventType,
+    eventDate,
+    location,
+    description,
+    associatedLink,
+    coverImage
+  }
+`;
+
+export const GALLERY_QUERY = groq`
+  *[_type == "galleryImage"] | order(_createdAt desc) {
+    _id,
+    title,
+    image,
+    category,
+    featured
+  }
+`;

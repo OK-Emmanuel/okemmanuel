@@ -119,21 +119,21 @@ export default async function ThinkingPostPage({
       <Nav />
       <main className="flex-1 bg-surface">
         <article>
-          <section className="relative border-b border-line pt-32 pb-16 md:pt-48 md:pb-24">
+          <section className="relative border-b border-line pt-32 pb-12 md:pt-40 md:pb-16">
             <div className="section-shell">
               <Reveal>
                 <Link 
                   href={`/thinking/${category}`} 
-                  className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted transition-colors hover:text-gold mb-10"
+                  className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-muted transition-colors hover:text-gold mb-8"
                 >
                   <ArrowLeft className="h-4 w-4" />
                   Back to {post.category.title}
                 </Link>
                 <div className="max-w-4xl">
-                  <div className="flex items-center gap-3 text-xs font-medium uppercase tracking-wider text-muted mb-6">
+                  <div className="flex items-center gap-3 text-xs font-medium uppercase tracking-wider text-muted mb-4">
                     <span className="text-gold">{post.category.title}</span>
                   </div>
-                  <h1 className="font-serif text-4xl leading-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
+                  <h1 className="font-serif text-4xl leading-tight text-foreground sm:text-5xl md:text-6xl">
                     {post.title}
                   </h1>
                   {post.excerpt && (
