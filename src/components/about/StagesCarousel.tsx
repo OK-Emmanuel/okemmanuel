@@ -7,7 +7,7 @@ export type StageCarouselItem = {
   title: string;
   description: string;
   image?: string;
-  color?: string;
+  gradientStyle?: React.CSSProperties;
 };
 
 type StagesCarouselProps = {
@@ -73,21 +73,15 @@ export default function StagesCarousel({
   };
 
   const currentItem = items[activeIndex];
-  const bgColor = currentItem.color || "from-slate-900 to-slate-800";
+  const gradientStyle = currentItem.gradientStyle || {
+    backgroundImage: "linear-gradient(135deg, var(--stage-1-from), var(--stage-1-to))",
+  };
 
   return (
-    <section className={`relative min-h-screen overflow-hidden bg-linear-to-br ${bgColor}`}>
-      {/* Background transition */}
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={`bg-${activeIndex}`}
-          className="absolute inset-0 opacity-20"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.2 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.8 }}
-        />
-      </AnimatePresence>
+    <section
+      className="relative min-h-screen overflow-hidden"
+      style={gradientStyle}
+    >
 
       <div className="relative z-10 flex h-screen items-center px-4 md:px-8">
         <div className="mx-auto w-full max-w-7xl">

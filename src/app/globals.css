@@ -67,6 +67,60 @@ html:not([data-mode="light"])[data-theme="purple"] {
   --line: rgba(18, 18, 22, 0.15);
 }
 
+/* STAGE COLORS - Adaptive to current theme */
+:root {
+  /* Default (Purple theme) */
+  --stage-1-from: #9e007c;
+  --stage-1-to: #6b0055;
+  --stage-2-from: #5a5a6e;
+  --stage-2-to: #3a3a4e;
+  --stage-3-from: #378cee;
+  --stage-3-to: #1f5ab8;
+  --stage-4-from: #f000b4;
+  --stage-4-to: #9e007c;
+  --stage-5-from: #7c3aed;
+  --stage-5-to: #5b21b6;
+}
+
+[data-theme="blue"] {
+  --stage-1-from: #378cee;
+  --stage-1-to: #1f5ab8;
+  --stage-2-from: #1e293b;
+  --stage-2-to: #0f172a;
+  --stage-3-from: #83cdff;
+  --stage-3-to: #378cee;
+  --stage-4-from: #ff1504;
+  --stage-4-to: #c21807;
+  --stage-5-from: #04eeff;
+  --stage-5-to: #0284c7;
+}
+
+[data-theme="gold"] {
+  --stage-1-from: #c9a24b;
+  --stage-1-to: #92752a;
+  --stage-2-from: #6b6a73;
+  --stage-2-to: #4a495a;
+  --stage-3-from: #e4c878;
+  --stage-3-to: #c9a24b;
+  --stage-4-from: #ffd104;
+  --stage-4-to: #c9a24b;
+  --stage-5-from: #d97706;
+  --stage-5-to: #92400e;
+}
+
+[data-theme="purple"] {
+  --stage-1-from: #9e007c;
+  --stage-1-to: #6b0055;
+  --stage-2-from: #5a5a6e;
+  --stage-2-to: #3a3a4e;
+  --stage-3-from: #378cee;
+  --stage-3-to: #1f5ab8;
+  --stage-4-from: #f000b4;
+  --stage-4-to: #9e007c;
+  --stage-5-from: #7c3aed;
+  --stage-5-to: #5b21b6;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-surface: var(--surface);
