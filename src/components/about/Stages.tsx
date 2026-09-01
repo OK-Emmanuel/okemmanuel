@@ -4,19 +4,19 @@ const STAGES = [
   {
     title: "The Builder",
     description:
-      "It started with code, because code was the fastest way to turn an idea into something real. Every problem became a system waiting to be built — and building became the instinct I've never lost.",
+      "It started with a fascination for creating things. Technology became one of my most powerful instruments for turning ideas and problems into practical solutions. From software to digital products and systems, building taught me to think in terms of possibility, structure and execution.",
     color: "from-amber-950 to-amber-900",
   },
   {
     title: "The Strategist",
     description:
-      "Writing good software wasn't enough. The real questions were bigger — what should we build, for whom, and why. Engineering sharpened into strategy: seeing the business, the market and the system all at once.",
+      "Building taught me that good technology is rarely the whole answer. I became interested in the problems behind the problems — how products create value, how businesses grow, how systems work, and how strategy determines what is worth building.",
     color: "from-slate-950 to-slate-900",
   },
   {
     title: "The Developer",
     description:
-      "The most durable thing I could build wasn't a product — it was a person. My focus shifted from writing systems to developing the people who'd go on to build their own.",
+      "Eventually, I realized that the most valuable things I could build weren't always software. People are also systems with extraordinary potential. My work expanded into teaching, mentorship and leadership development.",
     color: "from-blue-950 to-blue-900",
   },
   {

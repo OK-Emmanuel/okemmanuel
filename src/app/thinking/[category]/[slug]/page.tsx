@@ -12,6 +12,8 @@ import { POST_BY_SLUG_QUERY } from "@/sanity/queries";
 import { urlForImage } from "@/sanity/image";
 import RelatedThoughts from "@/components/thinking/RelatedThoughts";
 import ShareButtons from "@/components/thinking/ShareButtons";
+import PostReads from "@/components/thinking/PostReads";
+import PostReactions from "@/components/thinking/PostReactions";
 import { ArrowLeft } from "lucide-react";
 
 type PostDoc = {
@@ -52,7 +54,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = await getPost(slug).catch(() => null);
   return {
-    title: post ? `${post.title} — O.K. Emmanuel` : "Post — O.K. Emmanuel",
+    title: post ? `${post.title} — Olawuni Emmanuel Kayode` : "Post — Olawuni Emmanuel Kayode",
     description: post?.excerpt,
   };
 }
@@ -196,6 +198,8 @@ export default async function ThinkingPostPage({
                       </p>
                     </div>
 
+                    <PostReads slug={post.slug} />
+
                     <div>
                       <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted mb-3">Author</h4>
                       <p className="font-serif text-lg text-foreground">
@@ -218,6 +222,11 @@ export default async function ThinkingPostPage({
                         </div>
                       </div>
                     )}
+
+                    <div>
+                      <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted mb-3">Reactions</h4>
+                      <PostReactions slug={post.slug} />
+                    </div>
 
                     <div>
                       <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted mb-3">Share</h4>

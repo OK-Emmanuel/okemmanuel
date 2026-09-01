@@ -9,8 +9,8 @@ const OFFERS = [
     description:
       "From product definition to technical architecture, MVP scope and development roadmap.",
     pricing: [
-      { label: "Strategy Intensive", value: "₦250k – ₦500k" },
-      { label: "Implementation", value: "₦1.2M – ₦5M+" },
+      { label: "Strategy Intensive", value: "$500 – $5,000" },
+      { label: "Implementation", value: "$5,000 – $10,000+" },
     ],
   },
   {
@@ -19,7 +19,7 @@ const OFFERS = [
     audience: "For organizations ready to turn AI into operational leverage.",
     description:
       "I identify repetitive workflows, design automation opportunities and implement AI-powered systems that reduce operational friction.",
-    pricing: [{ label: "Monthly Engagement", value: "₦250k – ₦500k / mo" }],
+    pricing: [{ label: "Monthly Engagement", value: "$500 – $5,000/mo" }],
   },
   {
     number: "03",
@@ -27,7 +27,7 @@ const OFFERS = [
     audience: "For organizations whose digital presence needs to match their actual stature.",
     description:
       "Strategic websites and digital infrastructure designed around credibility, discovery, conversion and measurable business outcomes.",
-    pricing: [{ label: "Engagement", value: "₦500k – ₦1.2M+" }],
+    pricing: [{ label: "Engagement", value: "$2,000 – $10,000+" }],
   },
   {
     number: "04",
@@ -36,7 +36,7 @@ const OFFERS = [
       "For founders, executives, speakers and public-facing professionals.",
     description:
       "A premium digital platform that turns your expertise, reputation and body of work into a credible online authority asset.",
-    pricing: [{ label: "Engagement", value: "₦500k – ₦1.5M+" }],
+    pricing: [{ label: "Engagement", value: "$10,000 – $20,000+" }],
   },
 ];
 
@@ -47,10 +47,10 @@ export default function Offers() {
         <Reveal>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <h2 className="font-serif text-3xl leading-tight text-foreground sm:text-4xl md:text-5xl">
-              How I Build
+              Engagements
             </h2>
             <p className="max-w-sm text-sm text-muted">
-              Premium, high-value engagements — not hourly coding services.
+              Selective, high-impact work with founders, leaders and organizations building things that matter.
             </p>
           </div>
         </Reveal>

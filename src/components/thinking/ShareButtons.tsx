@@ -1,6 +1,6 @@
 "use client";
 
-import { Link as LinkIcon, Check } from "lucide-react";
+import { Link as LinkIcon, Check, MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export default function ShareButtons({ title }: { title: string }) {
@@ -17,6 +17,11 @@ export default function ShareButtons({ title }: { title: string }) {
 
   const shareToLinkedin = () => {
     window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, "_blank");
+  };
+
+  const shareToWhatsApp = () => {
+    const message = `Hey, I found this amazing article by O.K. Emmanuel, and I absolutely recommend you read and engage with it:\n*${title}* ${url}`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, "_blank");
   };
 
   const copyLink = () => {
@@ -40,6 +45,13 @@ export default function ShareButtons({ title }: { title: string }) {
         aria-label="Share on LinkedIn"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+      </button>
+      <button 
+        onClick={shareToWhatsApp}
+        className="flex h-10 w-10 items-center justify-center rounded-full border border-line bg-surface-raised text-muted transition-colors hover:border-gold/50 hover:text-gold"
+        aria-label="Share on WhatsApp"
+      >
+        <MessageCircle className="h-4 w-4" />
       </button>
       <button 
         onClick={copyLink}

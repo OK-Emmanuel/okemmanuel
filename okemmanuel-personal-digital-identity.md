@@ -449,30 +449,34 @@ Structure:
 
 Then tell the story in stages.
 
-### The Builder
+About O.K. Emmanuel
+I build, I learn, and I help others become capable of building.
 
-How technology became one of Emmanuel's primary instruments for creating solutions.
+My work has evolved across technology, strategy, entrepreneurship, education and leadership—but the thread connecting them has remained consistent: understanding problems deeply, developing capability, and turning potential into meaningful outcomes.
 
-### The Strategist
+The Builder
 
-How engineering evolved into broader product, business and systems thinking.
+I began with a fascination for creating things. Technology became one of my most powerful instruments for turning ideas and problems into practical solutions. From software to digital products and systems, building taught me to think in terms of possibility, structure and execution.
 
-### The Developer
+The Strategist
 
-How the focus expanded from building things to developing people.
+Building taught me that good technology is rarely the whole answer. I became increasingly interested in the problems behind the problems—how products create value, how businesses grow, how systems work, and how strategy determines what is worth building in the first place.
 
-### The Catalyst
+The Developer
 
-How leadership, education, innovation and social impact became increasingly important.
+Eventually, I realized that the most valuable things I could build weren't always software. People are also systems with extraordinary potential. My work expanded into teaching, mentorship and leadership development, helping people develop the thinking, skills and confidence to create their own outcomes.
 
-### The Evolving Man
+The Catalyst
 
-Emmanuel is still becoming.
+Today, I work across technology, strategy, entrepreneurship and human development—building ventures, developing people and creating initiatives that bring ideas into action. I am particularly interested in what becomes possible when capable people are equipped with the right knowledge, tools and opportunities.
 
-The website should explicitly communicate that the current identity is not a final destination.
+The Evolving Man
 
----
+I don't see any of these stages as finished.
 
+I am still learning, building, questioning and becoming.
+
+The work ahead is bigger than any title I've held so far: to keep developing myself while creating people, ventures and systems capable of creating meaningful change beyond me.
 # 16. THE EVOLUTION TIMELINE
 
 Create a visual timeline.
