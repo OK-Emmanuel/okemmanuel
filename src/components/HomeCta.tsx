@@ -19,7 +19,7 @@ export default function HomeCta() {
         <div className="flex flex-col gap-4 sm:flex-row">
           <a
             href="/connect"
-            className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-sm font-semibold text-[#08080a] transition-transform hover:scale-[1.02]"
+            className="inline-flex items-center justify-center rounded-full bg-gold px-8 py-4 text-sm font-semibold text-light transition-transform hover:scale-[1.02]"
           >
             Connect With Me
           </a>

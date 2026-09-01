@@ -9,7 +9,7 @@ const LINKS = [
   { label: "About", href: "/about" },
   { label: "Vision", href: "/vision" },
   { label: "Work", href: "/work" },
-  // { label: "Thinking", href: "/thinking" },
+  { label: "Thinking", href: "/thinking" },
   { label: "Initiatives", href: "/initiatives" },
 ];
 
@@ -65,7 +65,7 @@ export default function Nav() {
 
         <a
           href="/connect"
-          className="hidden lg:inline-flex items-center rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-[#08080a] transition-transform hover:scale-[1.03]"
+          className="hidden lg:inline-flex items-center rounded-full bg-gold px-5 py-2.5 text-sm font-semibold text-light transition-transform hover:scale-[1.03]"
         >
           Connect
         </a>
