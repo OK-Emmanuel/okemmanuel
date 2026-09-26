@@ -4,6 +4,7 @@ import { client } from "@/sanity/client";
 import { RELATED_POSTS_QUERY } from "@/sanity/queries";
 import { urlForImage } from "@/sanity/image";
 import Reveal, { RevealGroup, RevealItem } from "@/components/motion/Reveal";
+import ColorThumbnail from "@/components/thinking/ColorThumbnail";
 
 type RelatedPost = {
   _id: string;
@@ -34,16 +35,22 @@ export default async function RelatedThoughts({ categorySlug, currentPostId }: {
           {related.map((post) => (
             <RevealItem key={post._id} className="group relative flex flex-col justify-between rounded-2xl border border-line bg-surface-raised p-6">
               <div>
-                {post.coverImage && (
-                  <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-xl border border-line bg-surface">
+                <div className="relative mb-6 aspect-video w-full overflow-hidden rounded-xl border border-line bg-surface">
+                  {post.coverImage ? (
                     <Image
                       src={urlForImage(post.coverImage).width(600).url()}
                       alt={post.title}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                  </div>
-                )}
+                  ) : (
+                    <ColorThumbnail
+                      title={post.title}
+                      category={post.category?.title}
+                      className="!rounded-none !border-0"
+                    />
+                  )}
+                </div>
                 <div className="flex items-center gap-2 text-[10px] uppercase tracking-wider text-muted mb-3">
                   <span className="text-gold">{post.category.title}</span>
                   <span>&bull;</span>

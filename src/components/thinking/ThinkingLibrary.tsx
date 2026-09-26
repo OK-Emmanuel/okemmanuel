@@ -4,6 +4,7 @@ import Reveal, { RevealGroup, RevealItem } from "../motion/Reveal";
 import { client } from "@/sanity/client";
 import { CATEGORIES_QUERY, ALL_POSTS_QUERY } from "@/sanity/queries";
 import { urlForImage } from "@/sanity/image";
+import ColorThumbnail from "@/components/thinking/ColorThumbnail";
 
 type CategoryWithCount = {
   _id: string;
@@ -62,8 +63,8 @@ export default async function ThinkingLibrary() {
              <div className="flex flex-col gap-16">
                {posts.map((post) => (
                  <RevealItem key={post._id} className="group relative flex flex-col gap-6 sm:flex-row sm:items-start">
-                   {post.coverImage && (
-                     <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden rounded-xl border border-line bg-surface-raised sm:w-64">
+                   <div className="relative aspect-[4/3] w-full shrink-0 overflow-hidden rounded-xl border border-line bg-surface-raised sm:w-64">
+                     {post.coverImage ? (
                        <Image
                          src={urlForImage(post.coverImage).url()}
                          alt={post.title}
@@ -71,8 +72,14 @@ export default async function ThinkingLibrary() {
                          sizes="(min-width: 640px) 256px, 100vw"
                          className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                        />
-                     </div>
-                   )}
+                     ) : (
+                       <ColorThumbnail
+                         title={post.title}
+                         category={post.category?.title}
+                         className="!rounded-none !border-0"
+                       />
+                     )}
+                   </div>
                    <div className="flex-1">
                      <Link href={`/thinking/${post.category?.slug}/${post.slug}`} className="absolute inset-0 z-10">
                        <span className="sr-only">Read {post.title}</span>

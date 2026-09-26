@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import OnePersonManyExpressions from "@/components/OnePersonManyExpressions";
 import Domains from "@/components/Domains";
 import HomeInitiatives from "@/components/HomeInitiatives";
+import ThinkingPreview from "@/components/thinking/ThinkingPreview";
 // import CaseStudyPreview from "@/components/CaseStudyPreview";
 import HomeCta from "@/components/HomeCta";
 import Footer from "@/components/Footer";
@@ -17,6 +18,7 @@ export default function Home() {
         <Domains />
         {/* <CurrentWork /> */}
         <HomeInitiatives />
+        <ThinkingPreview />
         {/* <CaseStudyPreview /> */}
         <HomeCta />
       </main>
